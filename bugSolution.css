@@ -1,0 +1,26 @@
+/*Solution to the CSS calc() issues*/
+/*Correct operator usage*/
+.element1 {
+  width: calc(100% - 50px);
+}
+/*Correct unit usage*/
+.element2 {
+  width: calc(50% + 2em);
+}
+/*Addressing browser compatibility (using fallback)*/
+.element3 {
+  width: calc(100% - 50px);
+  width: 950px; /*Fallback for browsers not supporting calc()*/
+}
+/*Avoid nesting calc() where possible*/
+.element4 {
+  width: 50%;
+  margin-left: calc(20% + 10px);
+}
+/*Avoid complex nested calc()*/
+.element5 {
+  /*Avoid this kind of nesting*/
+  /*width: calc(calc(100% - 50px) + 10px);*/
+  width: calc(100% - 40px); /*Simpler alternative*/
+}
+/*Always test your CSS across multiple browsers to catch compatibility issues early on*/
